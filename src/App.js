@@ -1,12 +1,15 @@
 import React from 'react';
-import AddItemButton from './components/AddItemButton';
 import Header from './components/Header';
+import CompanyList from './components/CompanyList';
+import AddItem from './components/AddItem';
 
 export default function App() {
   return (
     <div>
       <Header />
-      <AddItemButton />
+      <div>
+        <AddItem />
+      </div>
     </div>
   );
 }
