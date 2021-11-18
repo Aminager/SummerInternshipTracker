@@ -1,8 +1,19 @@
 .header {
+    border-radius: 30px;
     font-size: 30px;
     padding: 10px;
     background: rgb(90, 167, 147);
     text-align: center;
+}
+
+.footer {
+    padding: 10px;
+    background: rgb(181, 212, 204);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .listitem {

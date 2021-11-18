@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
-import CompanyList from './components/CompanyList';
 import AddItem from './components/AddItem';
+import CreatedBy from './components/CreatedBy';
 
 export default function App() {
   return (
@@ -10,6 +10,7 @@ export default function App() {
       <div>
         <AddItem />
       </div>
+      <CreatedBy />
     </div>
   );
 }

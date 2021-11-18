@@ -13,6 +13,7 @@ const list = [
     }
 ];
 
+//Funkar ej
 function addItem() {
     list.push({
         company: 'test',
@@ -20,6 +21,7 @@ function addItem() {
         role: 'test'
     })
 }
+
 
 
 export default function AddItem(){
