@@ -1,0 +1,11 @@
+.header {
+    font-size: 30px;
+    padding: 10px;
+    background: rgb(90, 167, 147);
+    text-align: center;
+}
+
+.listitem {
+    border: 2px;
+    border-radius: 2px;
+}
