@@ -2,7 +2,7 @@ import React, { useState }  from "react";
 
 export default function AddItem() {
 
-    let [list, setList] = useState([
+    const [list, setList] = useState([
         {
             company: 'IKEA',
             city: 'Stockholm',
@@ -16,17 +16,17 @@ export default function AddItem() {
     ])
 
     function addItem() {
-        setList(...list, {
+        setList(oldList => [...oldList, {
             company: 'test',
             city: 'test',
             role: 'test'
-        })
+        }])
     }
 
     return (
         <div>
             <button onClick={
-               () => addItem()
+                addItem
             }>Add company</button>
 
             <ul>
