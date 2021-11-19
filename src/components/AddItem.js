@@ -1,4 +1,5 @@
 import React, { useState }  from "react";
+import ListItem from "./ListItem";
 
 export default function AddItem() {
 
@@ -25,13 +26,12 @@ export default function AddItem() {
 
     return (
         <div>
-            <button onClick={
-                addItem
-            }>Add company</button>
+            <button className="addbutton" onClick={addItem}>
+                Add company</button>
 
             <ul>
-                {list.map((item) => (
-                    <li>{item.company}, {item.city}, {item.role}</li>
+                {list.map(item => (
+                    <ListItem company={item.company} city={item.city} role={item.role}/>
                 ))}
             </ul>
         </div>

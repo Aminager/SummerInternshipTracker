@@ -5,12 +5,10 @@ import CreatedBy from './components/CreatedBy';
 
 export default function App() {
   return (
-    <div>
-      <Header />
-      <div>
-        <AddItem />
-      </div>
-      <CreatedBy />
+    <div className="App">
+      <Header header="Swedish SE internships"/>
+      <AddItem />
+      <CreatedBy name1="Amin Alian" name2="Ludvig Gierup"/>
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React from 'react';
 import '../App.css'
 
-export default function Header() {
+export default function Header({header}) {
     return(
         <div>
             <header className="header">
-                Swedish software engineering internships
+                {header}
             </header>
         </div>
     );

@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function CreatedBy() {
+export default function CreatedBy({name1, name2}) {
     return(
         <footer className="footer">
-            Created by Amin Alian and Ludvig Gierup
+            Created by {name1} and {name2}
         </footer>
     );
 }
