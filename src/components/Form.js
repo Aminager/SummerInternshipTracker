@@ -14,7 +14,7 @@ export default function Form({ companies, cName, cCity, cRole, setCName, setCCit
         setCRole(e.target.value)
     }
 
-    function resetInputValues() {
+    const resetInputValues = () => {
         setCName("")
         setCCity("")
         setCRole("")
@@ -33,7 +33,7 @@ export default function Form({ companies, cName, cCity, cRole, setCName, setCCit
 
 
     return (
-        <form>
+        <form className="form">
             <input onChange={updateName} value={cName} placeholder="Enter Company Name" name="company-name" type="text" />
             <input onChange={updateCity} value={cCity} placeholder="Enter internship city" name="company-city" type="text" />
             <input onChange={updateRole} value={cRole} placeholder="Enter internship role" name="company-role" type="text" />

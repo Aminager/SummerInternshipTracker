@@ -1,21 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import {writeJsonFile} from 'write-json-file'
 import Header from './components/Header';
 import CreatedBy from './components/CreatedBy';
 import Form from './components/Form'
 import List from './components/List'
+import data from './database/companies.json'
 
 export default function App() {
-  const [companies, setCompanies] = useState([{
-      company: 'IKEA',
-      city: 'Stockholm',
-      role: 'Software Engineer'
-    },
-    {
-      company: 'Axis',
-      city: 'Lund',
-      role: 'Software Engineer'
-    }
-  ])
+  const [companies, setCompanies] = useState([])
+
+  // const getCompanies = () => {
+  //   fetch('https://raw.githubusercontent.com/Aminager/SummerInternshipTracker/main/src/database/companies.json')
+  //   .then(resp => resp.json())
+  //   .then(respJson => setCompanies(respJson))
+  // }
+
+  const getCompanies = () => {
+    setCompanies(data)
+  }
+
+  const writeCompanies = () => {
+    writeJsonFile('./database/companies.json', JSON.parse(companies))
+  }
+
+  useEffect(() => {
+    getCompanies()
+  }, [])
+
+  useEffect(() => {
+    writeCompanies()
+  }, [companies])
 
   const [cName, setCName] = useState("")
   const [cCity, setCCity] = useState("")
