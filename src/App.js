@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import {writeJsonFile} from 'write-json-file'
 import Header from './components/Header';
 import CreatedBy from './components/CreatedBy';
 import Form from './components/Form'
@@ -20,7 +19,6 @@ export default function App() {
   }
 
   const writeCompanies = () => {
-    writeJsonFile('./database/companies.json', JSON.parse(companies))
   }
 
   useEffect(() => {
