@@ -1,0 +1,12 @@
+[
+    {
+        "company": "IKEA",
+        "city": "Stockholm",
+        "role": "Software Engineer"
+    }, 
+    {
+        "company": "Axis",
+        "city": "Lund",
+        "role":"Software Engineer"
+    }
+]
