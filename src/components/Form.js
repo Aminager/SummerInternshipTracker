@@ -22,7 +22,7 @@ export default function Form({ companies, cName, cCity, cRole, setCName, setCCit
 
     const submitCompany = (e) => {
         e.preventDefault();
-        if (cName == "" && cCity == "" && cRole == "") {
+        if (cName === "" && cCity === "" && cRole === "") {
             alert("Please fill out the form")
         } else {
             setCompanies([...companies, { company: cName, city: cCity, role: cRole }])
